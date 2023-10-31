@@ -18,12 +18,12 @@
 
 # Input Parameters
 param(
-    [string]$dir = "C:\Temp", # Working directory.
-    [int]$daysThreshold = 30, # Threshold in days for certificate expiry.
-    [string]$scriptName = "SSL-CertificateExpiryCheck", # Used for event source and log file naming. 
+    [string]$dir, # Working directory.
+    [int]$daysThreshold, # 30, Threshold in days for certificate expiry.
+    [string]$scriptName , # "SSL-CertificateExpiryCheck",  Used for event source and log file naming. 
     [bool]$EventLogging = $TRUE, # Enable writing to event log. 
     [string]$EventSource = $scriptName, # Event source name for event logging. 
-    [int]$EventID = 999, # Event log ID to be used (requires $EventLog = $TRUE).
+    [int]$EventID , # 999 Event log ID to be used (requires $EventLog = $TRUE).
     [bool]$sslOnly = $true # -SSLServerAuthentication switch
 )
 
